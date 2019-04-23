@@ -49,6 +49,24 @@ int main()
 	insertData(head, newData, "inside", 23);
 
 	printData(head);
+	printf("\n");
+
+	printf("Remove a data from the head of Linked List.\n");
+	head = removeData(head, "head", 0);
+
+	printData(head);
+	printf("\n");
+
+	printf("Remove a data from the tail of Linked List.\n");
+	removeData(head, "tail", 0);
+
+	printData(head);
+	printf("\n");
+
+	printf("Remove the data 100 from Linked List.\n");
+	removeData(head, "inside", 100);
+
+	printData(head);
 
 	freeData(head);
 }
