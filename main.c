@@ -67,6 +67,12 @@ int main()
 	removeData(head, "inside", 100);
 
 	printData(head);
+	printf("\n");
+
+	printf("Invert Data.\n");
+	head = invertData(head);
+
+	printData(head);
 
 	freeData(head);
 }
