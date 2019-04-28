@@ -8,7 +8,7 @@ Node removeData(Node current, char *method, int removedData) {
 
 		return newHead;
 	} else if(strcmp(method, "inside") == 0) {
-		Node previous;
+		Node previous = NULL;
 
 		while(current != NULL) {
 			if(current->data == removedData) {
@@ -20,7 +20,7 @@ Node removeData(Node current, char *method, int removedData) {
 			current = current->next;
 		}
 	} else if(strcmp(method, "tail") == 0) {
-		Node previous;
+		Node previous = NULL;
 
 		while(current != NULL) {
 			if(current->next == NULL) {

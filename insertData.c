@@ -17,6 +17,7 @@ Node insertData(Node current, int newData, char *method, int judge) {
 				n_data->next = current->next;
 				current->next = n_data;
 
+				return 0;
 				//return newHead;
 			}
 			current = current->next;
