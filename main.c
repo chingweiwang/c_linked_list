@@ -25,6 +25,10 @@ int main()
 			previous->next = current;
 
 		previous = current;
+#ifdef DEBUG
+		printf("head->data: %d\n", head->data);
+		printf("prevois->data: %d\n", previous->data);
+#endif
 	}
 
 	printData(head);
