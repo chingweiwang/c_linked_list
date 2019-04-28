@@ -1,0 +1,7 @@
+How to build ?
+
+	make
+
+How to clean ?
+
+	make clean
