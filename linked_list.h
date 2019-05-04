@@ -13,3 +13,4 @@ void freeData(Node current);
 Node insertData(Node current, int newData, char *method, int judge);
 Node removeData(Node current, char *method, int removedData);
 Node invertData(Node current);
+Node combinedData(Node current, Node newCurrent);

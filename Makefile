@@ -1,6 +1,6 @@
 CC=gcc
 CFLAGS=-DDEBUG
-OBJS=main.o freeData.o insertData.o invertData.o printData.o removeData.o
+OBJS=main.o freeData.o insertData.o invertData.o printData.o removeData.o combinedData.o
 TARGET=linked_list
 
 ${TARGET}: ${OBJS}
@@ -8,4 +8,4 @@ ${TARGET}: ${OBJS}
 
 .PHONY: clean
 clean:
-	@rm -rf *.o ${TARGET}
+	@rm -rf *.o

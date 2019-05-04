@@ -4,9 +4,12 @@ int main()
 {
 	int originalData[3] = {34, 23, 13};
 	int originalDataSize = sizeof(originalData) / sizeof(originalData[0]);
+	int otherData[3] = {25, 38, 99};
+	int otherDataSize = sizeof(otherData) / sizeof(otherData[0]);
 	int count, newData;
 
 	Node head = NULL;
+	Node newHead = NULL;
 	Node current = NULL;
 	Node previous = NULL;
 
@@ -76,6 +79,30 @@ int main()
 	printf("Invert Data.\n");
 	head = invertData(head);
 
+	printData(head);
+	printf("\n");
+
+	for(count = 0; count < otherDataSize; count++) {
+		current = (Node)malloc(sizeof(Node));
+		if(current == NULL)
+			return -1;
+
+		current->data = otherData[count];
+		current->next = NULL;
+
+		if(newHead == NULL)
+			newHead = current;
+		else
+			previous->next = current;
+
+		previous = current;
+	}
+	printf("Combine 2 Linked Lists.\n");
+	printData(head);
+	printData(newHead);
+	head = combinedData(head, newHead);
+
+	printf("Combined ");
 	printData(head);
 
 	freeData(head);
